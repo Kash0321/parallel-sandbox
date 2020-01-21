@@ -11,7 +11,9 @@ namespace Kash.Parallel
             //Using Thread without parameter
             //CreateThreadUsingThreadClassWithoutParameter();
             //Using Thread with parameter
-            CreateThreadUsingThreadClassWithParameter();
+            //CreateThreadUsingThreadClassWithParameter();
+            //Using ThreadPool
+            CreateThreadUsingThreadPool();
             Console.WriteLine("Finish Execution");
             Console.ReadLine();
         }
@@ -28,6 +30,11 @@ namespace Kash.Parallel
             thread.Start(100);
         }
 
+        private static void CreateThreadUsingThreadPool()
+        {
+            ThreadPool.QueueUserWorkItem(new WaitCallback(PrintNumber10Times));
+        }
+
         private static void PrintNumber10Times()
         {
             for (int i = 0; i < 10; i++)
@@ -35,6 +42,11 @@ namespace Kash.Parallel
                 Console.Write(i);
             }
             Console.WriteLine();
+        }
+
+        private static void PrintNumber10Times(object state)
+        {
+            PrintNumber10Times();
         }
 
         private static void PrintNumberNTimes(object times)
