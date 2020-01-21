@@ -22,7 +22,7 @@ namespace Kash.Parallel.Console
         {
             for (int i = 0; i < 10; i++)
             {
-                System.Console.Write(1);
+                System.Console.Write(i);
             }
             System.Console.WriteLine();
         }
