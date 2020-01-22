@@ -1,23 +1,30 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Text;
+using System.Threading;
 
-namespace Kash.Parallel.BackgroundWorker
+namespace Kash.Parallel.BGWorker
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var backgroundWorker = new BackgroundWorker();
-            backgroundWorker.WorkerReportsProgress = true;
-            backgroundWorker.WorkerSupportsCancellation = true;
+            var backgroundWorker = new BackgroundWorker
+            {
+                WorkerReportsProgress = true,
+                WorkerSupportsCancellation = true
+            };
+
             backgroundWorker.DoWork += SimulateServiceCall;
             backgroundWorker.ProgressChanged += ProgressChanged;
-            backgroundWorker.RunWorkerCompleted +=
-            RunWorkerCompleted;
+            backgroundWorker.RunWorkerCompleted += RunWorkerCompleted;
             backgroundWorker.RunWorkerAsync();
-            Console.WriteLine("To Cancel Worker Thread Press C.");
+
+            Console.WriteLine("[To Cancel Worker Thread Press C]");
+
             while (backgroundWorker.IsBusy)
             {
-                if (Console.ReadKey(true).KeyChar == 'C')
+                if (Console.ReadKey(true).KeyChar == 'C' || Console.ReadKey(true).KeyChar == 'c')
                 {
                     backgroundWorker.CancelAsync();
                 }
@@ -26,39 +33,39 @@ namespace Kash.Parallel.BackgroundWorker
 
         // This method executes when the background worker finishes
         // execution
-        private static void RunWorkerCompleted(object sender,
-        RunWorkerCompletedEventArgs e)
+        private static void RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error != null)
             {
                 Console.WriteLine(e.Error.Message);
             }
             else
-                Console.WriteLine($"Result from service call is {e.Result}");
+                Console.WriteLine($"Result from service call is: \n{e.Result}");
         }
 
         // This method is called when background worker want to
         // report progress to caller
-        private static void ProgressChanged(object sender,
-        ProgressChangedEventArgs e)
+        private static void ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             Console.WriteLine($"{e.ProgressPercentage}% completed");
         }
+
         // Service call we are trying to simulate
         private static void SimulateServiceCall(object sender, DoWorkEventArgs e)
         {
             var worker = sender as BackgroundWorker;
-            StringBuilder data = new StringBuilder();
+            var data = new StringBuilder();
+
             //Simulate a streaming service call which gets data and
             //store it to return back to caller
-            for (int i = 1; i <= 100; i++)
+            for (int i = 0; i < 100; i++)
             {
                 //worker.CancellationPending will be true if user
                 //press C
                 if (!worker.CancellationPending)
                 {
-                    data.Append(i);
-                    worker.ReportProgress(i);
+                    data.Append($"{i.ToString("00")} ");
+                    worker.ReportProgress(i+1);
                     Thread.Sleep(100);
                     //Try to uncomment and throw error
                     //throw new Exception("Some Error has occurred");
