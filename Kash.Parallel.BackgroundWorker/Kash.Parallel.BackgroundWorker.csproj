@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Kash.Parallel.BGWorker</RootNamespace>
+    <RootNamespace>Kash.Parallel</RootNamespace>
   </PropertyGroup>
 
 </Project>

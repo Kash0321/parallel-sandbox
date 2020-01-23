@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading;
 
-namespace Kash.Parallel.BGWorker
+namespace Kash.Parallel
 {
     class Program
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Kash.Parallel.TPL
+namespace Kash.Parallel
 {
     class Program
     {
