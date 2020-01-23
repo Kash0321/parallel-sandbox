@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kash.Parallel.TPL", "Kash.Parallel.TPL\Kash.Parallel.TPL.csproj", "{6A3C7F8D-E90D-4751-9525-AB1651D238FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kash.Parallel.Threads", "Kash.Parallel.Threads\Kash.Parallel.Threads.csproj", "{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kash.Parallel.BackgroundWorker", "Kash.Parallel.BackgroundWorker\Kash.Parallel.BackgroundWorker.csproj", "{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,29 @@ Global
 		{6A3C7F8D-E90D-4751-9525-AB1651D238FC}.Release|x64.Build.0 = Release|Any CPU
 		{6A3C7F8D-E90D-4751-9525-AB1651D238FC}.Release|x86.ActiveCfg = Release|Any CPU
 		{6A3C7F8D-E90D-4751-9525-AB1651D238FC}.Release|x86.Build.0 = Release|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Debug|x64.Build.0 = Debug|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Debug|x86.Build.0 = Debug|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Release|x64.ActiveCfg = Release|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Release|x64.Build.0 = Release|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Release|x86.ActiveCfg = Release|Any CPU
+		{FA0990DC-C6DA-4C34-837A-F7DDDE9F5CEB}.Release|x86.Build.0 = Release|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Release|x64.Build.0 = Release|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{FAF28CBA-30C0-4D2C-8F05-5517E5B1D1EE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
